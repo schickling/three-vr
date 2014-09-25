@@ -1,0 +1,31 @@
+{
+  "name": "three.js-vr",
+  "version": "0.0.0",
+  "description": "Device controls and render steps for mobile virtual reality applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schickling/three.js-vr.git"
+  },
+  "keywords": [
+    "three",
+    "threejs",
+    "three.js",
+    "vr",
+    "virtual",
+    "reality",
+    "cardboard",
+    "oculus",
+    "rift",
+    "immersion"
+  ],
+  "author": "Johannes Schickling <schickling.j@gmail.com> (https://github.com/schickling)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/schickling/three.js-vr/issues"
+  },
+  "homepage": "https://github.com/schickling/three.js-vr"
+}
