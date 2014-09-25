@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/schickling/three.js-vr/issues"
   },
-  "homepage": "https://github.com/schickling/three.js-vr"
+  "homepage": "https://github.com/schickling/three.js-vr",
+  "dependencies": {
+    "three": "^0.66.3"
+  }
 }
