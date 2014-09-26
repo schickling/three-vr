@@ -4,7 +4,8 @@
   "description": "Device controls and render steps for mobile virtual reality applications",
   "main": "three-vr.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node demo/server"
   },
   "repository": {
     "type": "git",
