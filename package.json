@@ -2,7 +2,7 @@
   "name": "three-vr",
   "version": "0.0.0",
   "description": "Device controls and render steps for mobile virtual reality applications",
-  "main": "index.js",
+  "main": "three-vr.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,7 +28,8 @@
     "url": "https://github.com/schickling/three.js-vr/issues"
   },
   "homepage": "https://github.com/schickling/three.js-vr",
-  "dependencies": {
-    "three": "^0.66.3"
+  "devDependencies": {
+    "duo": "^0.8.4",
+    "uglify-js": "^2.4.15"
   }
 }
