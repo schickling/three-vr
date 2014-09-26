@@ -1,8 +1,10 @@
-var camera, scene, renderer, controls, element, composer, cube;
-var barrelPassEnabled = false;
+var three = window.THREE = require('three');
+var threevr = require('../../lib');
+var tween = require('tween.js');
 
-init();
-animate();
+var camera, scene, renderer, element, cube;
+var barrelPassEnabled = true;
+
 
 function init() {
 
@@ -24,16 +26,8 @@ function init() {
   camera.position.set(0, 10, -10);
   scene.add(camera);
 
-  controls = new THREE.DeviceOrientationControls(camera, true);
-  controls.connect();
-  controls.update();
-
-
-  // render steps
-
-  composer = new THREE.EffectComposer(renderer);
-  composer.addPass(new THREE.StereoPass(scene, camera));
-
+  // threevr
+  threevr.init(renderer, scene, camera);
 
   // scene objects
 
@@ -53,7 +47,12 @@ function init() {
     }
   }, false);
 
+  animate();
+
 }
+
+
+init();
 
 function resize() {
   var width = window.innerWidth;
@@ -63,27 +62,7 @@ function resize() {
   camera.updateProjectionMatrix();
 
   renderer.setSize(width, height);
-  composer.setSize();
-}
-
-function toggleBarrelPass() {
-
-  barrelPassEnabled = !barrelPassEnabled;
-
-  if (barrelPassEnabled) {
-    composer.addPass(new THREE.ShaderPass(THREE.BarrelDistortsionShader));
-  } else {
-    composer.popPass();
-  }
-
-
-}
-
-function animate(t) {
-  composer.render();
-  TWEEN.update();
-  controls.update();
-  requestAnimationFrame(animate);
+  //composer.setSize();
 }
 
 function fullscreen() {
@@ -96,6 +75,24 @@ function fullscreen() {
   } else if (element.webkitRequestFullscreen) {
     element.webkitRequestFullscreen();
   }
+}
+
+function toggleBarrelPass() {
+
+  barrelPassEnabled = !barrelPassEnabled;
+
+  if (barrelPassEnabled) {
+    //composer.addPass(new ShaderPass(BarrelDistortsionShader));
+  } else {
+    //composer.popPass();
+  }
+
+}
+
+function animate(t) {
+  tween.update();
+  requestAnimationFrame(animate);
+  threevr.animate();
 }
 
 function addLight() {
@@ -136,7 +133,7 @@ function addCube() {
 
 }
 
-var socket = io();
+var socket = window.io();
 
 socket.on('keydown', function(key) {
   var ARROW_LEFT = 37;
@@ -169,12 +166,12 @@ socket.on('keydown', function(key) {
       x: cube.position.x,
       y: cube.position.y + n
     };
-    var tween = new TWEEN.Tween(position).to(target, 400);
-    // tween.easing(TWEEN.Easing.Elastic.InOut);
-    tween.onUpdate(function() {
+    var t = new tween.tween(position).to(target, 400);
+    // tween.easing(tween.Easing.Elastic.InOut);
+    t.onUpdate(function() {
       cube.position.y = position.y;
     });
-    tween.start();
+    t.start();
   }
 
   function tweenX(n) {
@@ -186,12 +183,12 @@ socket.on('keydown', function(key) {
       x: cube.position.x + n,
       y: cube.position.y
     };
-    var tween = new TWEEN.Tween(position).to(target, 400);
-    // tween.easing(TWEEN.Easing.Elastic.InOut);
-    tween.onUpdate(function() {
+    var t = new tween.tween(position).to(target, 400);
+    // tween.easing(tween.Easing.Elastic.InOut);
+    t.onUpdate(function() {
       cube.position.x = position.x;
     });
-    tween.start();
+    t.start();
   }
 
 });
