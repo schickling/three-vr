@@ -27,7 +27,11 @@ function init() {
   scene.add(camera);
 
   // threevr
-  threevr.init(renderer, scene, camera);
+  threevr.init({
+    camera: camera,
+    renderer: renderer,
+    scene: scene,
+  });
 
   // scene objects
 

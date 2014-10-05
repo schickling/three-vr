@@ -5,7 +5,7 @@
   "main": "three-vr.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node demo/server"
+    "start": "open demo/index.html"
   },
   "repository": {
     "type": "git",
