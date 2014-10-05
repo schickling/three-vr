@@ -23,7 +23,6 @@
     "rift",
     "immersion"
   ],
-  "author": "Johannes Schickling <schickling.j@gmail.com> (https://github.com/schickling)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/schickling/three.js-vr/issues"
