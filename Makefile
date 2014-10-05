@@ -26,4 +26,4 @@ build: node_modules
 	@$(MINIFY) three-vr.js --output three-vr.min.js
 
 build-demo: build
-	@$(BROWSERIFY) demo/app/index.js --debug > demo/app/build.js
+	@$(BROWSERIFY) demo/index.js --debug > demo/build.js
