@@ -1,5 +1,5 @@
 var THREE = require('three');
-var threevr = require('../three-vr');
+var threevr = require('../');
 
 var camera, scene, renderer, element, cube;
 

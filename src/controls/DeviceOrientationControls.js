@@ -14,6 +14,7 @@
  * (http://w3c.github.io/deviceorientation/spec-source-orientation.html)
  */
 
+var THREE = require('three');
 
 var DeviceOrientationControls = function(object) {
 

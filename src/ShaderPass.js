@@ -2,6 +2,8 @@
  * @author alteredq / http://alteredqualia.com/
  */
 
+var THREE = require('three');
+
 var ShaderPass = function(shader, textureID) {
 
   this.textureID = (textureID !== undefined) ? textureID : "tDiffuse";

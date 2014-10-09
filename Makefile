@@ -13,16 +13,10 @@ MINIFY = $(BINS)/uglifyjs
 default: build
 
 #
-# Target for `node_modules` folder.
-#
-node_modules: package.json
-	@npm install
-
-#
 # Target for `three-vr.js` file.
 #
-build: node_modules
-	@$(BROWSERIFY) src/index.js --standalone THREE.VR > three-vr.js
+build:
+	@$(BROWSERIFY) src/index.js -r three --standalone THREE.VR > three-vr.js
 	@$(MINIFY) three-vr.js --output three-vr.min.js
 
 build-demo: build

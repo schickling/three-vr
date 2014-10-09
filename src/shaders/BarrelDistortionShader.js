@@ -6,6 +6,8 @@
  * https://github.com/evanw/glfx.js
  */
 
+var THREE = require('three');
+
 var BarrelDistortsionShader = {
 
   uniforms: {

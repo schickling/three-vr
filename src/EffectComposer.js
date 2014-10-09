@@ -2,6 +2,8 @@
  * @author alteredq / http://alteredqualia.com/
  */
 
+var THREE = require('three');
+
 var EffectComposer = function(renderer) {
 
   this.renderer = renderer;

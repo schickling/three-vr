@@ -4,6 +4,8 @@
  * @authod arodic / http://aleksandarrodic.com/
  */
 
+var THREE = require('three');
+
 var StereoPass = function(scene, camera) {
 
 
