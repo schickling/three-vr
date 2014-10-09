@@ -22,7 +22,7 @@ node_modules: package.json
 # Target for `three-vr.js` file.
 #
 build: node_modules
-	@$(BROWSERIFY) lib/index.js --standalone THREE.VR > three-vr.js
+	@$(BROWSERIFY) src/index.js --standalone THREE.VR > three-vr.js
 	@$(MINIFY) three-vr.js --output three-vr.min.js
 
 build-demo: build

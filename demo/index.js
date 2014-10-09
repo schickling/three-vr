@@ -1,9 +1,7 @@
-var three = window.THREE = require('three');
-var threevr = require('../lib');
-var tween = require('tween.js');
+var THREE = require('three');
+var threevr = require('../three-vr');
 
 var camera, scene, renderer, element, cube;
-var barrelPassEnabled = true;
 
 
 function init() {
@@ -66,7 +64,6 @@ function resize() {
   camera.updateProjectionMatrix();
 
   renderer.setSize(width, height);
-  //composer.setSize();
 }
 
 function fullscreen() {
@@ -81,20 +78,7 @@ function fullscreen() {
   }
 }
 
-function toggleBarrelPass() {
-
-  barrelPassEnabled = !barrelPassEnabled;
-
-  if (barrelPassEnabled) {
-    //composer.addPass(new ShaderPass(BarrelDistortsionShader));
-  } else {
-    //composer.popPass();
-  }
-
-}
-
 function animate(t) {
-  tween.update();
   requestAnimationFrame(animate);
   threevr.animate();
 }
