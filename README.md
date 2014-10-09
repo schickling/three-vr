@@ -3,6 +3,12 @@ three-vr
 
 Device controls and render steps for mobile virtual reality applications
 
+## How it works
+
+three-vr takes the original `camera` and creates a [stereoskopic](http://en.wikipedia.org/wiki/Stereoscopy) effect by using two separated cameras. Each image is then rendered with a [Barrel Distrotion](http://en.wikipedia.org/wiki/Distortion_(optics)).
+
+![](https://raw.githubusercontent.com/schickling/three-vr/master/doc/resources/render-pipeline.png)
+
 ## Installation
 
 ```sh
@@ -24,8 +30,6 @@ threevr.init({
 ```
 
 ## API
-
-
 
 ## Authors
 
