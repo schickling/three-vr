@@ -1,4 +1,4 @@
-three-vr
+three-vr [![](http://img.shields.io/npm/v/three-vr.svg?style=flat)](https://www.npmjs.org/package/gulp-webserver)
 ===========
 
 Device controls and render steps for mobile virtual reality applications
