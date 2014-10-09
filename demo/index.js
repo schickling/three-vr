@@ -78,7 +78,7 @@ function fullscreen() {
   }
 }
 
-function animate(t) {
+function animate() {
   requestAnimationFrame(animate);
   threevr.animate();
 }
