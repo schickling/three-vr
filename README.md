@@ -78,7 +78,7 @@ $ npm start
 $ python -m SimpleHTTPServer
 ```
 
-Open [`localhost:8000/demo`](localhost:8000/demo) in your browser.
+Open `localhost:8000/demo` in your browser.
 
 ## Authors
 
