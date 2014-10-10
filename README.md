@@ -63,6 +63,23 @@ three-vr takes the original `camera` and creates a [stereoskopic](http://en.wiki
 
 Each camera has a slightly different position and thus a different perspective. The Barrel distrotion is implemented via a WebGL fragment shader which runs in parallel on the GPU.
 
+## Development
+
+### Build library
+
+```sh
+$ make build
+```
+
+### View demo application
+
+```sh
+$ npm start
+$ python -m SimpleHTTPServer
+```
+
+Open [`localhost:8000/demo`](localhost:8000/demo) in your browser.
+
 ## Authors
 
 * Johannes Schickling - [Github](https://github.com/schickling) - [Twitter](https://twitter.com/_schickling)

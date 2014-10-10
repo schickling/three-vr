@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "make build-demo && open demo/index.html",
+    "start": "make build-demo",
     "prepublish": "make"
   },
   "repository": {
