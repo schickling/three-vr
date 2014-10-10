@@ -5,11 +5,15 @@ Device controls and render steps for mobile virtual reality applications
 
 ## Installation
 
+Note: [three.js](https://github.com/mrdoob/three.js) has to be installed as well.
+
 ```sh
 $ npm install three-vr
 ```
 
 ## Usage
+
+Can be loaded with [Browserify](http://browserify.org), RequireJS as `three-vr` or simply included via `<script>` tag and accessed via global variable `THREE.VR`.
 
 ```js
 // load three-vr extension
@@ -31,19 +35,33 @@ function animate() {
 
 ## API
 
-### init(options)
+### `init(options)`
 
-Initializes the extention.
+Initializes the extention. Pass the options below.
 
-### animate()
+##### `options.renderer` (required)
 
-Updates the renderer.
+Specify your application's renderer.
+
+##### `options.camera` (required)
+
+Specify your application's camera.
+
+##### `options.scene` (required)
+
+Specify your application's scene.
+
+### `animate()`
+
+Updates the renderer. Should be called within your animation loop.
 
 ## How it works
 
 three-vr takes the original `camera` and creates a [stereoskopic](http://en.wikipedia.org/wiki/Stereoscopy) effect by using two separated cameras. Each image is then rendered with a [Barrel Distrotion](http://en.wikipedia.org/wiki/Distortion_(optics)).
 
 ![](https://raw.githubusercontent.com/schickling/three-vr/master/doc/resources/render-pipeline.png)
+
+Each camera has a slightly different position and thus a different perspective. The Barrel distrotion is implemented via a WebGL fragment shader which runs in parallel on the GPU.
 
 ## Authors
 
