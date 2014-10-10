@@ -71,11 +71,11 @@ Each camera has a slightly different position and thus a different perspective. 
 $ make build
 ```
 
-### View demo application
+### Run demo application
 
 ```sh
-$ npm start
-$ python -m SimpleHTTPServer
+$ npm start # builds demo
+$ python -m SimpleHTTPServer # starts webserver
 ```
 
 Open `localhost:8000/demo` in your browser.
